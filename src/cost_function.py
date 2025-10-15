@@ -65,5 +65,8 @@ def main():
     axs.set_zlabel('Cost')
     plt.show()
 
+    plt.contour(W, B, J)
+    plt.show()
+
 if __name__=='__main__':
     main()
