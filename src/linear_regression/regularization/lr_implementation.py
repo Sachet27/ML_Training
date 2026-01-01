@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import root_mean_squared_error, mean_absolute_percentage_error, r2_score
 
 def main():
-    df= pd.read_csv('../../datasets/Housing.csv')
+    df= pd.read_csv('../../../datasets/Housing.csv')
 
     #dealing with categorical data
     categorical_cols= list(df.select_dtypes('object'))
