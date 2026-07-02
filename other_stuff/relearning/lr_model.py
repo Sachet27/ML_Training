@@ -15,6 +15,10 @@ class LinearRegressor:
     def get_cost_hist(self):
         return self.__cost_hist
     
+    
+    def get_param_hist(self):
+        return self.__param_hist
+    
 
     def _cost(self, y_true, y_hat):
         m= y_true.shape[0]
@@ -35,7 +39,7 @@ class LinearRegressor:
 
             if i % 10 == 0:
                 self.__cost_hist.append(self._cost(y, y_hat))
-                self.__param_hist.append(self.W)
+                self.__param_hist.append((self.W).flatten())
 
 
     def predict(self, X_test):
